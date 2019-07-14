@@ -14,4 +14,5 @@ memo = {0:0, 1:1}
 def mfib(n):
     if n < 0: return None
     if n in memo: return memo[n] 
-    else: return mfib(n-1)+mfib(n-2)
+    memo[n] = mfib(n-1)+mfib(n-2)
+    return memo[n]
